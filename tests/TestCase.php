@@ -2,9 +2,9 @@
 
 namespace DominionSolutions\CustomerIO\Tests;
 
+use DominionSolutions\CustomerIO\CustomerIOServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use DominionSolutions\CustomerIO\CustomerIOServiceProvider;
 
 class TestCase extends Orchestra
 {
