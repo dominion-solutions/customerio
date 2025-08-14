@@ -1,0 +1,19 @@
+<?php
+
+namespace DominionSolutions\CustomerIO\Commands;
+
+use Illuminate\Console\Command;
+
+class CustomerIOCommand extends Command
+{
+    public $signature = 'customerio';
+
+    public $description = 'My command';
+
+    public function handle(): int
+    {
+        $this->comment('All done');
+
+        return self::SUCCESS;
+    }
+}
