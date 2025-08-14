@@ -2,9 +2,9 @@
 
 namespace DominionSolutions\CustomerIO;
 
+use DominionSolutions\CustomerIO\Commands\CustomerIOCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use DominionSolutions\CustomerIO\Commands\CustomerIOCommand;
 
 class CustomerIOServiceProvider extends PackageServiceProvider
 {
