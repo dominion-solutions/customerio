@@ -1,17 +1,17 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "dominion-solutions/customerio",
+    "description": "A Laravel Integration Layer for CustomerIO",
     "keywords": [
-        ":vendor_name",
+        "Dominion Solutions LLC",
         "laravel",
-        ":package_slug"
+        "customerio"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/dominion-solutions/customerio",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Mark J. Horninger",
+            "email": "mark.horninger@dominion.solutions",
             "role": "Developer"
         }
     ],
@@ -35,13 +35,13 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src/",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories/"
+            "Dominion Solutions LLC\\CustomerIO\\": "src/",
+            "Dominion Solutions LLC\\CustomerIO\\Database\\Factories\\": "database/factories/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests/",
+            "Dominion Solutions LLC\\CustomerIO\\Tests\\": "tests/",
             "Workbench\\App\\": "workbench/app/"
         }
     },
@@ -63,10 +63,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "Dominion Solutions LLC\\CustomerIO\\CustomerIOServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\Facades\\Skeleton"
+                "CustomerIO": "Dominion Solutions LLC\\CustomerIO\\Facades\\CustomerIO"
             }
         }
     },
