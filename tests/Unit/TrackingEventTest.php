@@ -3,7 +3,7 @@
 use DominionSolutions\CustomerIO\Facades\CustomerIO;
 use DominionSolutions\CustomerIO\TrackingEvent;
 
-it('can create a tracking event', function() {
+it('can create a tracking event', function () {
     mockCustomerIO();
     $trackingEvent = new TrackingEvent(userId: fake()->email(), tags: [
         fake()->word() => fake()->word(),
@@ -12,7 +12,7 @@ it('can create a tracking event', function() {
     expect($response->getStatusCode())->toBe(200);
 });
 
-it('can create an anonymous tracking event', function() {
+it('can create an anonymous tracking event', function () {
     mockCustomerIO();
     $trackingEvent = new TrackingEvent(anonymousId: fake()->email(), tags: [
         fake()->word() => fake()->word(),
@@ -21,8 +21,8 @@ it('can create an anonymous tracking event', function() {
     expect($response->getStatusCode())->toBe(200);
 });
 
-it('can handle errors', function() {
-    mockCustomerIO(trackSuccess:false);
+it('can handle errors', function () {
+    mockCustomerIO(trackSuccess: false);
     $trackingEvent = new TrackingEvent(userId: fake()->email(), tags: [
         fake()->word() => fake()->word(),
     ]);
