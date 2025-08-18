@@ -52,7 +52,7 @@ php artisan vendor:publish --tag="customerio-views"
 ## Usage
 
 ```php
-$customerIO = new Dominion Solutions LLC\CustomerIO();
+$customerIO = new DominionSolutions\CustomerIO();
 echo $customerIO->echoPhrase('Hello, Dominion Solutions LLC!');
 ```
 

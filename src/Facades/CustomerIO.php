@@ -5,7 +5,7 @@ namespace DominionSolutions\CustomerIO\Facades;
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \Dominion Solutions LLC\CustomerIO\CustomerIO
+ * @see \DominionSolutions\CustomerIO\CustomerIO
  */
 class CustomerIO extends Facade
 {
