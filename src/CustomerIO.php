@@ -27,9 +27,11 @@ class CustomerIO
         $this->baseUrl = sprintf('https://%s.customer.io/%s/', $subdomain, $this->version);
     }
 
-    public function upsertUser(User $user, ?string $apiKey = null) {
+    public function upsertUser(User $user, ?string $apiKey = null)
+    {
         $overrideApiKey = $apiKey ?? $this->apiKey;
-        return Http::withBasicAuth($overrideApiKey, "")
+
+        return Http::withBasicAuth($overrideApiKey, '')
             ->acceptJson()
             ->post(
                 sprintf('%s%s', $this->baseUrl, self::USER_ENDPOINT),
@@ -37,9 +39,11 @@ class CustomerIO
             );
     }
 
-    public function trackEvent(TrackingEvent $trackingEvent, ?string $apiKey = null) {
+    public function trackEvent(TrackingEvent $trackingEvent, ?string $apiKey = null)
+    {
         $overrideApiKey = $apiKey ?? $this->apiKey;
-        return Http::withBasicAuth($overrideApiKey, "")
+
+        return Http::withBasicAuth($overrideApiKey, '')
             ->acceptJson()
             ->post(
                 sprintf('%s%s', $this->baseUrl, self::TRACKING_ENDPOINT),
