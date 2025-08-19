@@ -8,8 +8,8 @@ class TrackingEvent implements Arrayable
 {
     public function __construct(
         public ?string $userId = null,
-        public ?string $anonymousId = null,
-        public ?array $tags = [],
+        public ?string $event = null,
+        public ?array $properties = [],
         public ?array $context = [],
     ) {}
 
@@ -17,8 +17,8 @@ class TrackingEvent implements Arrayable
     {
         return [
             'userId' => $this->userId,
-            'anonymousId' => $this->anonymousId,
-            'tags' => $this->tags,
+            'event' => $this->event,
+            'properties' => $this->properties,
             'context' => $this->context,
         ];
     }
