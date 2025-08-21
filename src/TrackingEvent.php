@@ -10,7 +10,7 @@ class TrackingEvent implements Arrayable
         public ?string $userId = null,
         public ?string $event = null,
         public ?array $properties = [],
-        public ?array $additionalFields = [],
+        public array $additionalFields = [],
         public ?array $context = [],
     ) {}
 
