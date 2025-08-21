@@ -2,9 +2,9 @@
     "name": "dominion-solutions/customerio",
     "description": "A Laravel Integration Layer for CustomerIO",
     "keywords": [
-        "Dominion Solutions LLC",
         "laravel",
-        "customerio"
+        "customerio",
+        "tracking"
     ],
     "homepage": "https://github.com/dominion-solutions/customerio",
     "license": "MIT",
