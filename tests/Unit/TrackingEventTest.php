@@ -5,7 +5,7 @@ use DominionSolutions\CustomerIO\TrackingEvent;
 
 it('can create a tracking event', function () {
     mockCustomerIO();
-    $trackingEvent = new TrackingEvent(userId: fake()->email(), tags: [
+    $trackingEvent = new TrackingEvent(userId: fake()->email(), properties: [
         fake()->word() => fake()->word(),
     ]);
     $response = CustomerIO::trackEvent($trackingEvent);
@@ -14,7 +14,7 @@ it('can create a tracking event', function () {
 
 it('can create an anonymous tracking event', function () {
     mockCustomerIO();
-    $trackingEvent = new TrackingEvent(anonymousId: fake()->email(), tags: [
+    $trackingEvent = new TrackingEvent(userId: fake()->email(), properties: [
         fake()->word() => fake()->word(),
     ]);
     $response = CustomerIO::trackEvent($trackingEvent);
@@ -23,7 +23,7 @@ it('can create an anonymous tracking event', function () {
 
 it('can handle errors', function () {
     mockCustomerIO(trackSuccess: false);
-    $trackingEvent = new TrackingEvent(userId: fake()->email(), tags: [
+    $trackingEvent = new TrackingEvent(userId: fake()->email(), properties: [
         fake()->word() => fake()->word(),
     ]);
     $response = CustomerIO::trackEvent($trackingEvent);
