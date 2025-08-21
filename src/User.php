@@ -9,7 +9,7 @@ class User implements Arrayable
     public function __construct(
         public ?string $userId = null,
         public ?string $anonymousId = null,
-        public ?array $additionalFields = [],
+        public array $additionalFields = [],
         public ?array $traits = [],
     ) {}
 
