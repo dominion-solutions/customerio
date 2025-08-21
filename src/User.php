@@ -13,13 +13,13 @@ class User implements Arrayable
         public ?array $traits = [],
     ) {}
 
-    public function toArray()
+    public function toArray() : array
     {
         $baseData = collect([
             'userId' => $this->userId,
             'anonymousId' => $this->anonymousId,
             'traits' => $this->traits,
         ]);
-        return $baseData->merge($this->additionalFields);
+        return $baseData->merge($this->additionalFields)->toArray();
     }
 }
