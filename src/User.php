@@ -6,17 +6,20 @@ use Illuminate\Contracts\Support\Arrayable;
 
 class User implements Arrayable
 {
-    public function __construct(public ?string $userId = null,
+    public function __construct(
+        public ?string $userId = null,
         public ?string $anonymousId = null,
-        public array $traits = []
+        public ?array $additionalFields = [],
+        public ?array $traits = [],
     ) {}
 
     public function toArray()
     {
-        return [
+        $baseData = collect([
             'userId' => $this->userId,
             'anonymousId' => $this->anonymousId,
             'traits' => $this->traits,
-        ];
+        ]);
+        return $baseData->merge($this->additionalFields);
     }
 }
