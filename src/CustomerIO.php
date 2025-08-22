@@ -53,8 +53,10 @@ class CustomerIO
             );
     }
 
-    public function mergeUsers(string $previousUserId, string $newUserId, ?string $apiKey = null){
+    public function mergeUsers(string $previousUserId, string $newUserId, ?string $apiKey = null)
+    {
         $overrideApiKey = $apiKey ?? $this->apiKey;
+
         return Http::withBasicAuth($overrideApiKey, '')
             ->acceptJson()
             ->post(
