@@ -10,6 +10,8 @@ class CustomerIO
 
     private const string TRACKING_ENDPOINT = 'track';
 
+    private const string MERGE_ENDPOINT = 'alias';
+
     private string $region;
 
     private string $apiKey;
@@ -48,6 +50,19 @@ class CustomerIO
             ->post(
                 sprintf('%s%s', $this->baseUrl, self::TRACKING_ENDPOINT),
                 $trackingEvent->toArray()
+            );
+    }
+
+    public function mergeUsers(string $previousUserId, string $newUserId, ?string $apiKey = null){
+        $overrideApiKey = $apiKey ?? $this->apiKey;
+        return Http::withBasicAuth($overrideApiKey, '')
+            ->acceptJson()
+            ->post(
+                sprintf('%s%s', $this->baseUrl, self::MERGE_ENDPOINT),
+                [
+                    'previousId' => $previousUserId,
+                    'userId' => $newUserId,
+                ]
             );
     }
 }
