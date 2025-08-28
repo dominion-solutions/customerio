@@ -106,7 +106,7 @@ $trackingEvent = new TrackingEvent(
         // More Context Fields
     ]);
 
-$result = DominionSolutions\CustomerIO\Facade\CustomerIO::CustomerIO::trackEvent(
+$result = DominionSolutions\CustomerIO\Facade\CustomerIO::trackEvent(
     $trackingEvent,
     // If you need to inject an API Key here
     apiKey: $apiKey
@@ -130,7 +130,7 @@ $trackingEvent = new TrackingEvent(
         // More Context Fields
     ]);
 
-$result = DominionSolutions\CustomerIO\Facade\CustomerIO::CustomerIO::trackEvent(
+$result = DominionSolutions\CustomerIO\Facade\CustomerIO::trackEvent(
     $trackingEvent,
     // If you need to inject an API Key here
     apiKey: $apiKey
