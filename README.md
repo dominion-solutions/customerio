@@ -78,8 +78,7 @@ $result = DominionSolutions\CustomerIO\Facade\CustomerIO::upsertUser(
 ```
 ### Identifying a Known User
 ```php
-$identifyUser = new DominionSolutions\CustomerIO\User(
-    userId: $request->$email,
+    userId: $request->email,
     traits: [
         'email' => $request->email,
         //Add your traits here
