@@ -117,7 +117,7 @@ $result = DominionSolutions\CustomerIO\Facade\CustomerIO::CustomerIO::trackEvent
 ### Tracking Events for a Known User
 ```php
 $trackingEvent = new TrackingEvent(
-    $request->$email,
+    $request->email,
     event: 'your-event-name',
     properties: [
         // Your Event's Properties
